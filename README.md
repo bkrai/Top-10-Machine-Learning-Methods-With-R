@@ -1,5 +1,5 @@
 # Top10R
-Includes top ten must know machine learning methods. 
+Includes top ten must know machine learning methods with R. 
 1. Linear regression 
 2. Logistic regression 
 3. Decision trees 
