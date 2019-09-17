@@ -16,6 +16,8 @@
 
 [5. K Nearest Neighbor (KNN) with R](https://www.youtube.com/watch?v=tSPg-JDAF4M&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=6&t=0s)
 
+[Code: K-Nearest Neighbor](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/KNN)
+
 [6. Association Rules with R](https://www.youtube.com/watch?v=91CmrpD-4Fw&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=7&t=369s)
 
 [7. Cluster analysis with R](https://www.youtube.com/watch?v=5eDqRysaico&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=8&t=0s)
