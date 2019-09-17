@@ -4,7 +4,7 @@
 
 [2. Video: Logistic Regression with R](https://www.youtube.com/watch?v=AVx7Wc1CQ7Y&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=3&t=33s)
 
-[Code: Logistic Regression](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/LogisticRegression)
+  [Code: Logistic Regression](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/LogisticRegression)
 
 [3. Decision Tree with R](https://www.youtube.com/watch?v=tU3Adlru1Ng&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=4&t=366s)
 
