@@ -26,6 +26,8 @@
 
 [6. Video: Association Rules with R](https://www.youtube.com/watch?v=91CmrpD-4Fw&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=7&t=369s)
 
+[Code: Association Rules](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/AssociationRules)
+
 [7. Video: Cluster analysis with R](https://www.youtube.com/watch?v=5eDqRysaico&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=8&t=0s)
 
 [Code: Cluster Analysis](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/ClusterAnalysis)
