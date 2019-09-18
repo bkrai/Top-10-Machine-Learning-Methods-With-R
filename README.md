@@ -14,6 +14,8 @@
 
 [3. Video: Decision Tree with R](https://www.youtube.com/watch?v=tU3Adlru1Ng&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=4&t=366s)
 
+[Code: Decision Tree](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/DecisionTree)
+
 [4. Video: Naive Bayes Classification with R](https://www.youtube.com/watch?v=RLjSQdcg8AM&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=5&t=353s)
 
 [Code: Naive Bayes ](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/NaiveBayes)
