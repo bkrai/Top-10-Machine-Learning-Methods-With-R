@@ -26,4 +26,6 @@
 
 [9. Random forest with R](https://www.youtube.com/watch?v=dJclNIN-TPo&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=10&t=69s)
 
+[Code: Random Forest](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/RandomForest)
+
 [10. Extreme gradient boosting with R](https://www.youtube.com/watch?v=woVTNwRrFHE&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=11&t=1072s)
