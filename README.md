@@ -2,7 +2,7 @@
 
 ## Top Ten Must Know Machine Learning Methods for carrier in Data Analytics and Data Science
 
-### Provides hands-on practical application examples for using most popular machine learning methods.
+### Provides hands-on practical application examples for using most popular machine learning methods.Includes detailed lecture videos and link to codes used.
 
 [1. Video:Multiple Linear Regression with R](https://www.youtube.com/watch?v=S-zKhFr91Tg&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=2&t=529s)
 
