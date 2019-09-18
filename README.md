@@ -6,6 +6,8 @@
 
 [1. Video:Multiple Linear Regression with R](https://www.youtube.com/watch?v=S-zKhFr91Tg&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=2&t=529s)
 
+[Code: Linear Regression](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/LinearRegression)
+
 [2. Video: Logistic Regression with R](https://www.youtube.com/watch?v=AVx7Wc1CQ7Y&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=3&t=33s)
 
   [Code: Logistic Regression](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/LogisticRegression)
