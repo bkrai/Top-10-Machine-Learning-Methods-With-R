@@ -1,0 +1,73 @@
+# Iris Data
+data <- read.csv(file.choose(), header=T)
+str(data)
+data$NSP <- factor(data$NSP)
+
+# Partition Data
+set.seed(111)
+ind <- sample(2, nrow(data), 
+              replace = TRUE, 
+              prob = c(.8, .2))
+training <- data[ind==1,]
+testing <- data[ind==2,]
+
+# Scatter Plots & Correlations
+library(psych)
+pairs.panels(training[,-22], 
+             gap=0,
+             bg=c("red","yellow","blue")[training$NSP],
+             pch=21)
+
+# PCA
+pc <- prcomp(training[,-22],
+             center = TRUE,
+             scale. = TRUE)
+attributes(pc)
+print(pc)
+summary(pc)
+plot(pc, type = "lines")
+
+# Orthogonality of PCs
+pairs.panels(pc$x, 
+             gap=0,
+             bg=c("red","yellow","blue")[training$NSP],
+             pch=21)
+# Bi-Plot
+library(devtools)
+install_github("ggbiplot", "vqv")
+library(ggbiplot)
+g <- ggbiplot(pc, 
+              obs.scale = 1, 
+              var.scale = 1, 
+              groups = training$NSP, 
+              ellipse = TRUE, 
+              circle = TRUE,
+              ellipse.prob = 0.68)
+g <- g + scale_color_discrete(name = '')
+g <- g + theme(legend.direction = 'horizontal', 
+               legend.position = 'top')
+print(g)
+
+# Prediction with Principal Components
+trg <- predict(pc, training)
+trg <- data.frame(trg, training[22])
+tst <- predict(pc, testing)
+tst <- data.frame(tst, testing[22])
+
+# Multinomial Logistic regression with 1st two PCs
+library(nnet)
+trg$NSP<-relevel(trg$NSP, ref="1")
+mymodel <- multinom(NSP~PC1+PC2+PC3+PC4+PC5, data=trg)
+summary(mymodel)
+
+# Misclassification error & Confusion matrix - training
+p <- predict(mymodel, trg)
+tab <- table(p, trg$NSP)
+tab
+1-sum(diag(tab))/sum(tab)
+
+# Misclassification error & Confusion matrix - Testing
+p1 <- predict(mymodel, tst)
+tab1 <- table(p1, tst$NSP)
+tab1
+1-sum(diag(tab1))/sum(tab1)
