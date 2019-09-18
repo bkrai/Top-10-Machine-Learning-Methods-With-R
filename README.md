@@ -22,6 +22,8 @@
 
 [7. Video: Cluster analysis with R](https://www.youtube.com/watch?v=5eDqRysaico&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=8&t=0s)
 
+[Code: Cluster Analysis](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/ClusterAnalysis)
+
 [8. Video: Principal component analysis with R](https://www.youtube.com/watch?v=OowGKNgdowA&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=9&t=586s)
 
 [9. Video: Random forest with R](https://www.youtube.com/watch?v=dJclNIN-TPo&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=10&t=69s)
