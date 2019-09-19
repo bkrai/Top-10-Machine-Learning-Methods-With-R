@@ -1,6 +1,6 @@
 # Top ten must know machine learning methods with R!
 
-## Top Ten Must Know Machine Learning Methods for carrier in Data Analytics and Data Science
+# Top Ten Must Know Machine Learning Methods for carrier in Data Analytics and Data Science
 
 ### Provides hands-on practical application examples for using most popular machine learning methods.Includes detailed lecture videos and link to R codes used.
 
@@ -41,3 +41,4 @@
 [Code: Random Forest](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/RandomForest)
 
 [10. Video: Extreme gradient boosting with R](https://www.youtube.com/watch?v=woVTNwRrFHE&list=PL34t5iLfZddsQ0NzMFszGduj3jE8UFm4O&index=11&t=1072s)
+[Code: XGB](https://github.com/bkrai/Top-10-Machine-Learning-Methods-With-R/blob/master/ExtremeGradientBoosting)
