@@ -1,6 +1,6 @@
 # Top ten must know machine learning methods with R!
 
-Top Ten Must Know Machine Learning Methods for carrier in Data Analytics and Data Science
+Top Ten Must Know Machine Learning Methods for career in Data Analytics and Data Science
 
 Provides hands-on practical application examples for using most popular machine learning methods. Includes detailed lecture videos and link to R codes used in all application examples.
 
