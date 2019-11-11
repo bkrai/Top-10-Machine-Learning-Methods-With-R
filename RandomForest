@@ -18,8 +18,6 @@ rf <- randomForest(NSP~., data=train,
                    mtry = 8,
                    importance = TRUE,
                    proximity = TRUE)
-print(rf)
-attributes(rf)
 
 # Prediction & Confusion Matrix - train data
 library(caret)
