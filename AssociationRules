@@ -25,6 +25,13 @@ which(redundant)
 # Removing redundant rules
 rules.pruned<-rules.sorted[!redundant]
 
+# If above code doesn't work, try this:
+redundant <- is.redundant(rules, measure="confidence")
+which(redundant)
+rules.pruned <- rules[!redundant]
+rules.pruned <- sort(rules.pruned, by="lift")
+inspect(rules.pruned)
+
 # Graphs and Charts
 library(arulesViz)
 plot(rules.all)
