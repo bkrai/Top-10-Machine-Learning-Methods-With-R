@@ -17,15 +17,6 @@ quality(rules)<-round(quality(rules),digits=3)
 rules.sorted <- sort(rules, by="lift")
 
 # Finding redundancy
-subset.matrix<-is.subset(rules.sorted,rules.sorted)
-subset.matrix[lower.tri(subset.matrix,diag=T)]<-NA
-redundant<-colSums(subset.matrix,na.rm=T)>=1
-which(redundant)
-
-# Removing redundant rules
-rules.pruned<-rules.sorted[!redundant]
-
-# If above code doesn't work, try this:
 redundant <- is.redundant(rules, measure="confidence")
 which(redundant)
 rules.pruned <- rules[!redundant]
