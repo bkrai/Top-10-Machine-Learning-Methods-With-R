@@ -9,10 +9,10 @@ plot(mydata$Fuel_Cost~ mydata$Sales, data = mydata)
 with(mydata,text(mydata$Fuel_Cost ~ mydata$Sales, labels=mydata$Company,pos=4))
 
 # Normalize 
-z = mydata[,-c(1,1)]
-means = apply(z,2,mean)
-sds = apply(z,2,sd)
-nor = scale(z,center=means,scale=sds)
+z <- mydata[,-c(1,1)]
+means <- apply(z,2,mean)
+sds <- apply(z,2,sd)
+nor <- scale(z,center=means,scale=sds)
 
 # Calculate distance matrix  
 distance = dist(nor)
