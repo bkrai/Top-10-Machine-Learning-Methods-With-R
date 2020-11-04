@@ -25,6 +25,6 @@ inspect(rules.pruned)
 
 # Graphs and Charts
 library(arulesViz)
-plot(rules.all)
-plot(rules.all,method="grouped")
-plot(rules.all,method="graph",control=list(type="items"))
+plot(rules)
+plot(rules,method="grouped")
+plot(rules,method="graph",control=list(type="items"))
