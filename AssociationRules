@@ -1,5 +1,5 @@
 # Reading the data file
-mydata<-read.csv("~/Desktop/Cosmetics.csv",header=T, , colClasses = "Factor")
+mydata<-read.csv("~/Desktop/Cosmetics.csv",header=T, , colClasses = "factor")
 
 # Finding association rules
 library(arules)
