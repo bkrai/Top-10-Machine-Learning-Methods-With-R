@@ -1,0 +1,48 @@
+#Libraries
+library(xgboost) 
+library(caret)
+library(tictoc)
+
+#Data
+data <- read.csv(file.choose(), header = T)
+data$Buy <- as.factor(data$Buy)
+data <- data[,-1]
+
+# Data Partition
+set.seed(123)
+ind <- sample(2, nrow(data), replace = T, prob = c(0.80, 0.20))
+train <- data[ind==1,]
+test <- data[ind==2,]
+
+# Random search
+modelLookup("xgbTree")
+set.seed(123) 
+cv <- trainControl(method="repeatedcv", 
+                   number = 3, 
+                   repeats = 2,
+                   allowParallel = T,
+                   verboseIter = T,
+                   returnData = F,
+                   search = 'random') 
+set.seed(123) 
+boo <- train(Buy ~ . , 
+             data = train,  
+             trControl = cv,
+             method = "xgbTree",
+             tuneLength = 3) 
+
+#Confusion matrix
+p <-  predict(boo, newdata = train, 'raw')
+(tab <- table(Predicted = p, Actual = train$Buy))
+p1 <-  predict(boo, newdata = test, 'raw')
+(tab1 <- table(Predicted = p1, Actual = test$Buy))
+
+# Submission
+new <- read.csv(file.choose(), header = T)
+p2 <-  predict(boo, newdata = new, 'prob')
+p2 <- p2[,-1]
+submission <- new$Id
+submission <- data.frame(submission)
+submission$Predicted <- p2
+colnames(submission) <- c('Id', 'Predicted')
+write.csv(submission, 'submission.csv', row.names=F)
