@@ -4,7 +4,7 @@ library(pROC)
 library(mlbench)
 
 # Example-1 Classification
-data <- read.csv(file.choose(), header=T)
+data <- read.csv('https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/binary.csv')
 str(data)
 data$admit[data$admit == 0] <- 'no'
 data$admit[data$admit == 1] <- 'yes'
