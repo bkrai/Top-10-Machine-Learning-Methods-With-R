@@ -1,7 +1,7 @@
 # Logistic Regression
 
 # Read data file
-mydata <- read.csv(file.choose(), header = T)
+mydata <- read.csv('https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/binary.csv')
 str(mydata)
 mydata$admit <- as.factor(mydata$admit)
 mydata$rank <- as.factor(mydata$rank)
