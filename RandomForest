@@ -1,5 +1,5 @@
 # Read Data
-data <- read.csv(file.choose(), header = TRUE)
+data <- read.csv('https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/Cardiotocographic.csv')
 str(data)
 data$NSP <- as.factor(data$NSP)
 table(data$NSP)
