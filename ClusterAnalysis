@@ -1,5 +1,5 @@
 # Cluster Analysis
-mydata <- read.csv(file.choose(), header=T)
+mydata <- read.csv('https://raw.githubusercontent.com/bkrai/Top-10-Machine-Learning-Methods-With-R/master/utilities.csv')
 str(mydata)
 head(mydata)
 pairs(mydata[2:9])
