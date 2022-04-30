@@ -1,5 +1,5 @@
 # Read data file
-mydata <- read.csv("~/Dropbox/Public/Cardiotocographic.csv")
+mydata <- read.csv("https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/Cardiotocographic.csv")
 mydata$NSPF <- as.factor(mydata$NSP)
 
 # Decision tree with party
