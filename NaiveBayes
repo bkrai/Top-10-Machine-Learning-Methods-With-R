@@ -8,7 +8,7 @@ library(psych)
 
 #Read data file
 getwd()
-data <- read.csv(file.choose(), header = T)
+data <- read.csv('https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/binary.csv')
 
 #contingency table 
 xtabs(~admit + rank, data = data)
