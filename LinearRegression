@@ -1,5 +1,5 @@
 # Read Data
-vehicle <- read.csv("vehicle.csv", header = TRUE)
+vehicle <- read.csv("https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/vehicle.csv", header = TRUE)
 
 # Data Review and Data Preparation
 vehicle$lh[vehicle$lh==0] <- mean(vehicle$lh)
