@@ -1,4 +1,4 @@
-# CTG Data
+# Iris Data
 data("iris")
 str(iris)
 summary(iris)
