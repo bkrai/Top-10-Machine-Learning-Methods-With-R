@@ -1,0 +1,73 @@
+# CTG Data
+data("iris")
+str(iris)
+summary(iris)
+
+# Partition Data
+set.seed(111)
+ind <- sample(2, nrow(iris), 
+              replace = TRUE, 
+              prob = c(.8, .2))
+training <- iris[ind==1,]
+testing <- iris[ind==2,]
+
+# Scatter Plots & Correlations
+library(psych)
+pairs.panels(training[,-22], 
+             gap=0,
+             bg=c("red","yellow","blue")[training$Species],
+             pch=21)
+
+# PCA
+pc <- prcomp(training[,-5],
+             center = TRUE,
+             scale. = TRUE)
+attributes(pc)
+print(pc)
+summary(pc)
+plot(pc, type = "lines")
+
+# Orthogonality of PCs
+pairs.panels(pc$x, 
+             gap=0,
+             bg=c("red","yellow","blue")[training$Species],
+             pch=21)
+# Bi-Plot
+library(devtools)
+install_github("ggbiplot", "vqv")
+library(ggbiplot)
+g <- ggbiplot(pc, 
+              obs.scale = 1, 
+              var.scale = 1, 
+              groups = training$Species, 
+              ellipse = TRUE, 
+              circle = TRUE,
+              ellipse.prob = 0.68)
+g <- g + scale_color_discrete(name = '')
+g <- g + theme(legend.direction = 'horizontal', 
+               legend.position = 'top')
+print(g)
+
+# Prediction with Principal Components
+trg <- predict(pc, training)
+trg <- data.frame(trg, training[5])
+tst <- predict(pc, testing)
+tst <- data.frame(tst, testing[5])
+
+# Multinomial Logistic regression with 1st two PCs
+library(nnet)
+trg$Species <- relevel(trg$Species, ref="setosa")
+mymodel <- multinom(Species~PC1+PC2, data=trg)
+summary(mymodel)
+
+# Misclassification error & Confusion matrix - training
+p <- predict(mymodel, trg)
+tab <- table(p, trg$Species)
+tab
+1-sum(diag(tab))/sum(tab)
+
+# Misclassification error & Confusion matrix - Testing
+p1 <- predict(mymodel, tst)
+tab1 <- table(p1, tst$Species)
+tab1
+1-sum(diag(tab1))/sum(tab1)
