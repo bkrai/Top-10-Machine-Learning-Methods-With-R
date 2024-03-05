@@ -1,4 +1,4 @@
-# Iris Data
+# CTG Data
 data <- read.csv('https://raw.githubusercontent.com/bkrai/Statistical-Modeling-and-Graphs-with-R/main/Cardiotocographic.csv')
 str(data)
 data$NSP <- factor(data$NSP)
