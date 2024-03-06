@@ -13,7 +13,7 @@ testing <- iris[ind==2,]
 
 # Scatter Plots & Correlations
 library(psych)
-pairs.panels(training[,-22], 
+pairs.panels(training[,-5], 
              gap=0,
              bg=c("red","yellow","blue")[training$Species],
              pch=21)
