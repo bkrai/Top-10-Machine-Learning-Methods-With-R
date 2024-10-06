@@ -33,8 +33,6 @@ pairs.panels(pc$x,
              bg=c("red","yellow","blue")[training$Species],
              pch=21)
 # Bi-Plot
-library(devtools)
-install_github("ggbiplot", "vqv")
 library(ggbiplot)
 g <- ggbiplot(pc, 
               obs.scale = 1, 
